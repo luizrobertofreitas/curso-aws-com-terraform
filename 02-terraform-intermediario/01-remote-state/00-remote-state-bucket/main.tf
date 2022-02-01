@@ -14,6 +14,9 @@ provider "aws" {
   profile = "tf014"
 }
 
+// Basically "data" is used to query information from the provider. The example bellow is getting the account number
+// Resources, instead, just create / change the state of your AWS resources
+
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket" "remote-state" {
